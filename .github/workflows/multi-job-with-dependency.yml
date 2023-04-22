@@ -1,4 +1,4 @@
-name: multi-job-sample
+name: multi-job-with-dependency-sample
 
 on: [push]
 
