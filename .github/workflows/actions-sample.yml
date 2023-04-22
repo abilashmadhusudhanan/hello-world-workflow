@@ -6,7 +6,10 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: using-javascript-hello-world-actions
+              id: greet
               uses: actions/hello-world-javascript-action@main
               with:
                 who-to-greet: 'Abilash'
+            - name: log-greeting-time
+              run: "${{ steps.greet.outputs.time }}"
               
