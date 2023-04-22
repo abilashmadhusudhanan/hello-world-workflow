@@ -1,0 +1,14 @@
+name: checkout-action-sample
+on: [push]
+
+jobs:
+    checkout-action-sample:
+        runs-on: ubuntu-latest
+        steps:
+            - name: list-files-before-checkout
+              run: ls -a
+            - name: checkout
+              uses: actions/checkout@latest
+            - name: list-files-after-checkout
+              run: ls -a
+              
