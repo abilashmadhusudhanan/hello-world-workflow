@@ -1,0 +1,12 @@
+name: actions-sample
+on: [push]
+
+jobs:
+    javascript-hello-world-sample:
+        runs-on: ubuntu-latest
+        steps:
+            - name: using-javascript-hello-world-actions
+              uses: actions/hello-world-javascript-action@main
+              with:
+                who-to-greet: 'Abilash'
+              
