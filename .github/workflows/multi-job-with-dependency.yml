@@ -1,0 +1,16 @@
+name: multi-job-sample
+
+on: [push]
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print-hello-world
+        run: echo "Hello world!"
+  powershell-sample:
+    runs-on: windows-latest
+    needs: ['hello-world']
+    steps:
+      - name: print-current-directory
+        run: Get-Location
