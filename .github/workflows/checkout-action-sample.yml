@@ -8,7 +8,7 @@ jobs:
             - name: list-files-before-checkout
               run: ls -a
             - name: checkout
-              uses: actions/checkout@latest
+              uses: actions/checkout@3.5.2
             - name: list-files-after-checkout
               run: ls -a
               
