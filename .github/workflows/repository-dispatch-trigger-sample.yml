@@ -1,0 +1,13 @@
+name: repository-dispatch-trigger-sample
+
+on:
+    repository_dispatch:
+        types:
+            build
+
+jobs:
+    print-payload-passed:
+        runs-on: ubuntu-latest
+        steps:
+            - name: print-payload
+              run: echo "${{github.event.client_payload.env}}"
