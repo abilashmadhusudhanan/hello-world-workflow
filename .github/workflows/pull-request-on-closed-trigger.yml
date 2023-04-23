@@ -1,0 +1,13 @@
+name: pull-request-on-closed-trigger
+
+on:
+    pull_request:
+        types:
+            closed
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pull-request-closed-event
+        run: echo "Pull request closed"
