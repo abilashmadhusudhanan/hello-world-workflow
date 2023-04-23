@@ -1,2 +1,2 @@
-# hello-world-workflow
+# hello-world-workflows
 Hello world project for github workflow
