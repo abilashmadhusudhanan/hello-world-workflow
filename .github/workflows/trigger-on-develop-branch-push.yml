@@ -1,0 +1,13 @@
+name: trigger-on-develop-branch-push
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print-hello-world-from-develop
+        run: echo "Hello world! from develop"
