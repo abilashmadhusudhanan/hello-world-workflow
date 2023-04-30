@@ -1,0 +1,20 @@
+name: env-var-sample
+
+on: push
+
+env:
+    WF_ENV: "This is avaliable to the workflow"
+
+jobs:
+    job1:
+        runs-on: ubuntu-latest
+        env:
+            JOB_ENV: "This is available to the job"
+        steps:
+            - name: step1
+              env:
+                TASK_ENV: "This is available to the step"
+              run: |
+                echo "WF_ENV: ${WF_ENV}"
+                echo "JOB_ENV: ${JOB_ENV}"
+                echo "TASK_ENV: ${TASK_ENV}"
