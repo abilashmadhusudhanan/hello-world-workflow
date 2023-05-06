@@ -1,11 +1,11 @@
-name: startegy-sample
+name: strategy-sample
 
 on:
   - push
 
 jobs:
-  startegy-sample:
-    startegy:
+  strategy-sample:
+    strategy:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest ]
     runs-on: ${{ matrix.os }}
