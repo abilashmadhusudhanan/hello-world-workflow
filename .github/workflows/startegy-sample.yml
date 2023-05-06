@@ -1,0 +1,14 @@
+name: startegy-sample
+
+on:
+  - push
+
+jobs:
+  startegy-sample:
+    startegy:
+      matrix:
+        os: [windows-latest, ubuntu-latest, macos-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: log-node-version
+        run: node -v
