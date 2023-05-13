@@ -3,10 +3,11 @@ name: container-sample
 on: push
 
 jobs:
-  runs-on: ubuntu-latest
-  container:
-    image: node:latest
+  container-sample:
+    runs-on: ubuntu-latest
+    container:
+      image: node:latest
 
-  steps:
-    - name: log-node-version
-      run: node -v
+    steps:
+      - name: log-node-version
+        run: node -v
