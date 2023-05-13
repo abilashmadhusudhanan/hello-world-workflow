@@ -8,7 +8,16 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest, ubuntu-latest, macos-latest ]
+        include:
+          - os: ubuntu-latest
+            is_linux: "true"
+        exclude:
+          - os: macos-latest
     runs-on: ${{ matrix.os }}
+    env:
+      IS_LINUX: ${{ matrix.os }}
     steps:
       - name: log-node-version
-        run: node -v
+        run: |
+          node -v
+          echo "${IS_LINUX}"
