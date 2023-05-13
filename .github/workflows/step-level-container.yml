@@ -1,0 +1,15 @@
+name: step-level-container
+
+on: push
+
+jobs:
+  step-level-container:
+    runs-on: ubuntu-latest
+    steps:
+      - name: log-job-node-version
+        run: node -v
+      - name: log-step-node-version
+        uses: docker://node:latest
+        with:
+          entrypoint: /usr/bin/local/node
+          args: -v
