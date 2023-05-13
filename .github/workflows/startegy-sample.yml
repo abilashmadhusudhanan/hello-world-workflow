@@ -15,7 +15,7 @@ jobs:
           - os: macos-latest
     runs-on: ${{ matrix.os }}
     env:
-      IS_LINUX: ${{ matrix.os }}
+      IS_LINUX: ${{ matrix.is_linux }}
     steps:
       - name: log-node-version
         run: |
