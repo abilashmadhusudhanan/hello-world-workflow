@@ -11,5 +11,5 @@ jobs:
       - name: log-step-node-version
         uses: docker://node:latest
         with:
-          entrypoint: /usr/bin/local/node
+          entrypoint: /usr/local/bin/node
           args: -v
